@@ -1,6 +1,6 @@
 -- archivo: clash_royale_ddl.sql
 -- =========================================================
--- Esquema educativo Clash Royale (DDL definitivo, sin warnings)
+-- Esquema educativo Clash Royale
 -- ---------------------------------------------------------
 -- Objetivo:
 --   - Base de datos sencilla pero realista para practicar consultas SQL.
@@ -54,7 +54,7 @@ CREATE TABLE arena (
 -- Tabla: clan
 -- ---------------------------------------------------------
 -- Representa un clan del juego.
--- El nº de miembros no se almacena, se calcula en vw_clan_miembros.
+-- El n.º de miembros no se almacena, se calcula en vw_clan_miembros.
 -- =========================================================
 CREATE TABLE clan (
     id_clan INT UNSIGNED NOT NULL AUTO_INCREMENT,                 -- PK
@@ -254,7 +254,7 @@ GROUP BY
     j.nombre;
 
 -- Vista: vw_clan_miembros
---   - Nº de miembros por clan (jugadores con id_clan no NULL)
+--   - N.º de miembros por clan (jugadores con id_clan no NULL)
 CREATE OR REPLACE SQL SECURITY INVOKER VIEW vw_clan_miembros AS
 SELECT
     id_clan,
